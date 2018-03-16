@@ -1,1 +1,1 @@
-include ':app', ':lib.utils'
+include ':app', ':lib.utils', ':module.wallet', ':module.token', ':module.market', ':module.trade'
