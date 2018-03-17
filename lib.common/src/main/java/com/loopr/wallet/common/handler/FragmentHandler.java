@@ -1,14 +1,13 @@
-package com.loopr.wallet.handler;
+package com.loopr.wallet.common.handler;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import com.loopr.wallet.BuildConfig;
-import com.loopr.wallet.R;
-import com.loopr.wallet.activity.BaseActivity;
-import com.loopr.wallet.fragment.BaseFragment;
-import com.loopr.wallet.utils.tools.LogUtils;
+import com.loopr.wallet.common.BuildConfig;
+import com.loopr.wallet.common.ui.activity.BaseActivity;
+import com.loopr.wallet.common.ui.fragment.BaseFragment;
+import com.loopr.wallet.common.utils.LogUtils;
 
 import java.util.HashMap;
 import java.util.List;
@@ -252,7 +251,7 @@ public class FragmentHandler {
                 if (!mapFragmentInfo.containsKey(iter.getClass().getName()))
                     continue;
                 FragmentInfo info = mapFragmentInfo.get(iter.getClass().getName());
-                if (info != null && info.idContainer == R.id.fragment_tab_container) {
+                if (info != null) {
                     if (iter.getUserVisibleHint())
                         homePagerFragment = iter;
                 } else
@@ -303,8 +302,16 @@ public class FragmentHandler {
             return null;
         }
         BaseFragment baseFragment = null;
-        FragmentInfo info = mapFragmentInfo.get(fragmentClass.getName());
-        if (info.idContainer != R.id.fragment_tab_container) {
+        List<Fragment> fragments = fragmentManager.getFragments();
+        if(fragments!=null){
+            for (Fragment fragment : fragments) {
+                if (fragment.getClass().getName().equals(fragmentClass.getName()) && (fragment instanceof BaseFragment)) {
+                    baseFragment = (BaseFragment) fragment;
+                    if (debug) LogUtils.e("switch", "found it!");
+                    break;
+                }
+            }
+        }else {
             baseFragment = (BaseFragment) fragmentManager.findFragmentByTag(fragmentClass.getName());
             if (baseFragment == null) {
                 try {
@@ -318,16 +325,9 @@ public class FragmentHandler {
                     return baseFragment;
                 }
             }
-        } else {
-            List<Fragment> fragments = fragmentManager.getFragments();
-            for (Fragment fragment : fragments) {
-                if (fragment.getClass().getName().equals(fragmentClass.getName()) && (fragment instanceof BaseFragment)) {
-                    baseFragment = (BaseFragment) fragment;
-                    if (debug) LogUtils.e("switch", "found it!");
-                    break;
-                }
-            }
         }
+
+
 
         return baseFragment;
     }

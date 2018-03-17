@@ -3,7 +3,7 @@ package com.loopr.wallet;
 import android.app.Application;
 import android.content.Context;
 
-import com.loopr.wallet.utils.AppGlobal;
+import com.loopr.wallet.common.AppGlobal;
 
 /**
  * Created by snow on 2018/3/11.

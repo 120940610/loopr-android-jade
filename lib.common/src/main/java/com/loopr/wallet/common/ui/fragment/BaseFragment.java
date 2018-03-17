@@ -1,7 +1,8 @@
-package com.loopr.wallet.fragment;
+package com.loopr.wallet.common.ui.fragment;
 
 import android.support.v4.app.Fragment;
-import com.loopr.wallet.activity.BaseActivity;
+
+import com.loopr.wallet.common.ui.activity.BaseActivity;
 
 /**
  * Created by snow on 2018/3/12.

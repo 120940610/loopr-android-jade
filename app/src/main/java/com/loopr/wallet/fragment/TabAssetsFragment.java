@@ -7,13 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.loopr.wallet.R;
-import com.loopr.wallet.utils.tools.ToastUtils;
+import com.loopr.wallet.common.ui.fragment.BaseFragment;
+import com.loopr.wallet.common.utils.ToastUtils;
 
 /**
  * Created by snow on 2018/3/12.
  */
 
-public class TabAssetsFragment extends BaseFragment{
+public class TabAssetsFragment extends BaseFragment {
     private View mRootView;
     private long mExitTime;
 

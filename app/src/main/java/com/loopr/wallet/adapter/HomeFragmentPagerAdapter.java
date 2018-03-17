@@ -4,11 +4,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.loopr.wallet.common.utils.LogUtils;
 import com.loopr.wallet.fragment.TabAssetsFragment;
 import com.loopr.wallet.fragment.TabMarketFragment;
 import com.loopr.wallet.fragment.TabSettingFragment;
 import com.loopr.wallet.fragment.TabTradeFragment;
-import com.loopr.wallet.utils.tools.LogUtils;
 
 /**
  * Created by snow on 2018/3/12.

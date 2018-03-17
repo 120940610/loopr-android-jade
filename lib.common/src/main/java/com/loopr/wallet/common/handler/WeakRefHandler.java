@@ -1,4 +1,4 @@
-package com.loopr.wallet.handler;
+package com.loopr.wallet.common.handler;
 
 import android.app.Activity;
 import android.content.Context;

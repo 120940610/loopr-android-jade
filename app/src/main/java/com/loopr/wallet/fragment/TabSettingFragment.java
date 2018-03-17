@@ -7,7 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.loopr.wallet.R;
-import com.loopr.wallet.utils.events.GlobalEvents;
+import com.loopr.wallet.common.events.GlobalEvents;
+import com.loopr.wallet.common.ui.fragment.BaseFragment;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -15,7 +16,7 @@ import org.greenrobot.eventbus.EventBus;
  * Created by snow on 2018/3/12.
  */
 
-public class TabSettingFragment extends BaseFragment{
+public class TabSettingFragment extends BaseFragment {
 
     private View mRootView;
 

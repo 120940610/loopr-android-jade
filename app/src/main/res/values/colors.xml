@@ -9,8 +9,5 @@
 
     <color name="tab_text_normal">#33000000</color>
     <color name="tab_text_selected">#000000</color>
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
-    <color name="grey">#808080</color>
 
 </resources>

@@ -16,7 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.loopr.wallet.R;
-import com.loopr.wallet.utils.AppGlobal;
+import com.loopr.wallet.common.AppGlobal;
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 

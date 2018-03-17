@@ -1,12 +1,13 @@
-package com.loopr.wallet.activity;
+package com.loopr.wallet.common.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import com.loopr.wallet.fragment.BaseFragment;
-import com.loopr.wallet.handler.FragmentHandler;
-import com.loopr.wallet.utils.tools.LogUtils;
+
+import com.loopr.wallet.common.handler.FragmentHandler;
+import com.loopr.wallet.common.ui.fragment.BaseFragment;
+import com.loopr.wallet.common.utils.LogUtils;
 
 /**
  * Created by snow on 2018/3/6.
