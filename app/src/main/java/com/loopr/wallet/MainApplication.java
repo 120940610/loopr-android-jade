@@ -3,6 +3,7 @@ package com.loopr.wallet;
 import android.app.Application;
 import android.content.Context;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.loopr.wallet.common.AppGlobal;
 
 /**
@@ -20,6 +21,11 @@ public class MainApplication extends Application {
         }
         mHasAttachBaseContext = true;
         super.attachBaseContext(base);
+        if (BuildConfig.DEBUG) {
+            ARouter.openLog();
+            ARouter.openDebug();
+        }
+        ARouter.init(this);
         //Global Context init
         AppGlobal.init(this);
     }

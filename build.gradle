@@ -28,6 +28,8 @@ allprojects {
     }
 }
 
+apply from: "./gradle-relay.gradle"
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

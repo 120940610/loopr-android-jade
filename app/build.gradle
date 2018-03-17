@@ -19,7 +19,14 @@ android {
         ndk {
             abiFilters 'armeabi'
         }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -32,7 +39,10 @@ android {
 dependencies {
 
     compile project(':lib.common')
+    compile project(':module.wallet')
     compile gradle.eventbus
+    annotationProcessor gradle.arouterCompiler
+    compile gradle.libARouter
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'

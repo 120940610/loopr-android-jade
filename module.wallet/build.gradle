@@ -13,7 +13,13 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
     }
+
 
     buildTypes {
         release {
@@ -25,7 +31,10 @@ android {
 }
 
 dependencies {
-    compile project(':lib.utils')
+    compile project(':lib.common')
+
+    annotationProcessor gradle.arouterCompiler
+    compile gradle.libARouter
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
