@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">wallet</string>
+    <string name="import_wallet">Import Wallet</string>
+    <string name="generate_wallet">Generate Wallet</string>
 </resources>

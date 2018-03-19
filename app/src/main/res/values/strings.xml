@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Loopr Wallet</string>
     <string name="press_again_and_exit">Press again to exit</string>
-    <string name="import_wallet">Import Wallet</string>
-    <string name="generate_wallet">Generate Wallet</string>
+
 </resources>
