@@ -8,8 +8,8 @@
         android:color="@color/grey"
         />
     <corners
-        android:bottomLeftRadius="4dip"
-        android:bottomRightRadius="4dip"
-        android:topLeftRadius="4dip"
-        android:topRightRadius="4dip" />
+        android:bottomLeftRadius="25dip"
+        android:bottomRightRadius="25dip"
+        android:topLeftRadius="25dip"
+        android:topRightRadius="25dip" />
 </shape>

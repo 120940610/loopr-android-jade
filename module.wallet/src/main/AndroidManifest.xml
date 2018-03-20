@@ -5,9 +5,14 @@
         <activity
             android:name=".ui.activity.CreateWalletActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.activity.ManageWalletActivity"></activity>
+            android:name=".ui.activity.ImportWalletActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".ui.activity.ManageWalletActivity" />
     </application>
 </manifest>

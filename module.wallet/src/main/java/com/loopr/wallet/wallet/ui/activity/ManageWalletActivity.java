@@ -17,18 +17,24 @@ import com.loopr.wallet.wallet.R;
 @Route(path = "/wallet/ManageWalletActivity")
 public class ManageWalletActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView mCreateWalletTextView;
+    private TextView mImportWalletTextView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manage_wallet_activity);
         mCreateWalletTextView=(TextView)findViewById(R.id.create_wallet);
+        mImportWalletTextView=(TextView)findViewById(R.id.import_wallet);
         mCreateWalletTextView.setOnClickListener(this);
+        mImportWalletTextView.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         if(view.getId()==R.id.create_wallet){
             ARouter.getInstance().build("/wallet/CreateWalletActivity").navigation();
+        }else if(view.getId()==R.id.import_wallet){
+            ARouter.getInstance().build("/wallet/ImportWalletActivity").navigation();
         }
     }
 }

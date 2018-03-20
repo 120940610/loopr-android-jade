@@ -2,4 +2,6 @@
     <string name="app_name">wallet</string>
     <string name="import_wallet">Import Wallet</string>
     <string name="generate_wallet">Generate Wallet</string>
+    <string name="app_desc">Secure token trading right from your own wallet</string>
+
 </resources>
