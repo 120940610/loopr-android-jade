@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.loopr.wallet.common.ui.widget.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftDrawable="@drawable/back_arror"
+        app:titleInCenter="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_12"
+        android:layout_below="@+id/title_bar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_wallet_des"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_20" />
+
+        <EditText
+            android:id="@+id/wallet_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/wallet_create_margin_top"
+            android:hint="@string/wallet_name_des"
+            android:textColorHint="@color/wallet_create_text"
+            android:padding="12dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/wallet_secret"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wallet_name"
+            android:layout_marginTop="@dimen/wallet_passwd_margin_top"
+            android:textColorHint="@color/wallet_create_text"
+            android:hint="@string/wallet_passwd_des"
+            android:padding="12dp"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+</RelativeLayout>

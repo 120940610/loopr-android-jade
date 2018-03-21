@@ -2,6 +2,10 @@
     <string name="app_name">wallet</string>
     <string name="import_wallet">Import Wallet</string>
     <string name="generate_wallet">Generate Wallet</string>
+    <string name="create_wallet_des">Create a new wallet</string>
+    <string name="wallet_name_des">Give your wallet an awesome name</string>
+    <string name="wallet_passwd_des">Set a password</string>
+
     <string name="app_desc">Secure token trading right from your own wallet</string>
 
 </resources>

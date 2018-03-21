@@ -9,7 +9,7 @@
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/loopr"
+        android:src="@drawable/wallet_loopr"
         android:layout_marginTop="@dimen/dp_38"/>
     <TextView
         android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:background="@drawable/rectangle_black_bg"
+            android:background="@drawable/wallet_rectangle_black_bg"
             android:padding="12dp"
             android:textSize="@dimen/sp_16"
             android:text="@string/generate_wallet"
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_14"
-            android:background="@drawable/rectangle_white_bg"
+            android:background="@drawable/wallet_rectangle_white_bg"
             android:padding="12dp"
             android:gravity="center"
             android:textSize="@dimen/sp_16"

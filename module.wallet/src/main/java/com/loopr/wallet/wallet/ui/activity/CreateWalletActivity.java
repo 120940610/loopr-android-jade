@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.loopr.wallet.common.ui.activity.BaseActivity;
+import com.loopr.wallet.wallet.R;
 
 /**
  * Created by snow on 2018/3/17.
@@ -14,5 +15,6 @@ public class CreateWalletActivity extends BaseActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.wallet_create_activity);
     }
 }

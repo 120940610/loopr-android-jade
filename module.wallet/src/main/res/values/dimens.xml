@@ -3,6 +3,12 @@
     <dimen name="dp_24">24dp</dimen>
     <dimen name="dp_38">38dp</dimen>
     <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
     <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+
+    <dimen name="wallet_create_margin_top">87dp</dimen>
+    <dimen name="wallet_passwd_margin_top">47dp</dimen>
+
 
 </resources>

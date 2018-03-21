@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonTitleBar">
+        <attr name="title" format="string" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="background" format="reference" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleInCenter" format="boolean" />
+        <attr name="leftDrawable" format="reference" />
+        <attr name="rightDrawable" format="reference" />
+    </declare-styleable>
+</resources>

@@ -22,7 +22,7 @@ public class ManageWalletActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.manage_wallet_activity);
+        setContentView(R.layout.wallet_manage_activity);
         mCreateWalletTextView=(TextView)findViewById(R.id.create_wallet);
         mImportWalletTextView=(TextView)findViewById(R.id.import_wallet);
         mCreateWalletTextView.setOnClickListener(this);
