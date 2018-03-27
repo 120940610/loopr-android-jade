@@ -9,6 +9,9 @@
 
     <dimen name="wallet_create_margin_top">87dp</dimen>
     <dimen name="wallet_passwd_margin_top">47dp</dimen>
+    <dimen name="wallet_next_margin_top">49dp</dimen>
 
+    <dimen name="wallet_edittext_line">1dp</dimen>
+    <dimen name="wallet_edittext_margin_top">2dp</dimen>
 
 </resources>

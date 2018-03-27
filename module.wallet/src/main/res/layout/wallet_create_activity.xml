@@ -35,18 +35,48 @@
             android:layout_marginTop="@dimen/wallet_create_margin_top"
             android:hint="@string/wallet_name_des"
             android:textColorHint="@color/wallet_create_text"
-            android:padding="12dp"
+            android:singleLine="true"
+            android:background="@null"
+            android:imeOptions="actionNext"
             android:textColor="@color/black" />
+        <View
+            android:id="@+id/wallet_name_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wallet_edittext_line"
+            android:layout_below="@+id/wallet_name"
+            android:layout_marginTop="@dimen/wallet_edittext_margin_top"
+            android:background="@color/wallet_edittext_custom"/>
 
         <EditText
             android:id="@+id/wallet_secret"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@null"
             android:layout_below="@+id/wallet_name"
             android:layout_marginTop="@dimen/wallet_passwd_margin_top"
             android:textColorHint="@color/wallet_create_text"
             android:hint="@string/wallet_passwd_des"
-            android:padding="12dp"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
             android:textColor="@color/black" />
+
+        <View
+            android:id="@+id/wallet_secret_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wallet_edittext_line"
+            android:layout_below="@+id/wallet_secret"
+            android:layout_marginTop="@dimen/wallet_edittext_margin_top"
+            android:background="@color/wallet_edittext_custom"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_12"
+            android:layout_below="@+id/wallet_secret"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/wallet_circle_bg"
+            android:src="@drawable/wallet_next"
+            android:layout_marginTop="@dimen/wallet_next_margin_top"/>
     </RelativeLayout>
 </RelativeLayout>

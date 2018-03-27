@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="wallet_create_text">#4c000000</color>
+    <color name="wallet_edittext_custom">#19000000</color>
+    <color name="wallet_edittext_press">#000000</color>
 
 </resources>
