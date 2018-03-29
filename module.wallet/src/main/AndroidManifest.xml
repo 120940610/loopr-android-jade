@@ -8,6 +8,10 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".ui.activity.PasswdConfirmActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".ui.activity.ImportWalletActivity"
             android:screenOrientation="portrait" />
 

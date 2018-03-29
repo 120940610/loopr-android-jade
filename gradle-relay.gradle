@@ -6,3 +6,9 @@ gradle.ext.arouterCompiler = 'com.alibaba:arouter-compiler:1.1.3'
 //Permisson
 gradle.ext.permissionDispatcherCompiler = "com.github.hotchemi:permissionsdispatcher-processor:2.4.0"
 gradle.ext.libPermissionDispatcher = "com.github.hotchemi:permissionsdispatcher:2.4.0"
+//ButterKnife
+gradle.ext.butterknifeCompiler = 'com.jakewharton:butterknife-compiler:8.8.1'
+gradle.ext.libButterKnife = 'com.jakewharton:butterknife:8.8.1'
+
+gradle.ext.lifecycleRuntime ="android.arch.lifecycle:runtime:1.0.3"
+gradle.ext.lifecycleExtensions= "android.arch.lifecycle:extensions:1.0.0"
