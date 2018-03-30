@@ -33,11 +33,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/wallet_create_margin_top"
-            android:hint="@string/wallet_name_des"
+            android:hint="@string/wallet_passwd_confirm_des"
             android:textColorHint="@color/wallet_create_text"
             android:singleLine="true"
             android:background="@null"
             android:imeOptions="actionNext"
+            android:inputType="textPassword"
             android:textColor="@color/black" />
         <View
             android:id="@+id/wallet_confirm_line"
@@ -48,7 +49,7 @@
             android:background="@color/wallet_edittext_custom"/>
 
         <TextView
-            android:id="@+id/wallet_confirm_des"
+            android:id="@+id/wallet_confirm_warn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/wallet_confirm_line"
@@ -60,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/dp_12"
-            android:layout_below="@+id/wallet_confirm_des"
+            android:layout_below="@+id/wallet_confirm_warn"
             android:layout_centerHorizontal="true"
             android:background="@drawable/wallet_circle_bg"
             android:src="@drawable/wallet_next"

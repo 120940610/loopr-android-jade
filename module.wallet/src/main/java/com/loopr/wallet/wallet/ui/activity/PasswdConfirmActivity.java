@@ -7,14 +7,19 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.loopr.wallet.common.AppGlobal;
 import com.loopr.wallet.common.ui.activity.BaseActivity;
 import com.loopr.wallet.common.ui.widget.CommonTitleBar;
 import com.loopr.wallet.wallet.R;
 import com.loopr.wallet.wallet.R2;
+import com.loopr.wallet.wallet.util.KeyUtil;
 
+import butterknife.BindColor;
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -37,6 +42,18 @@ public class PasswdConfirmActivity extends BaseActivity{
 
     @BindView(R2.id.wallet_confirm_next)
     public ImageView mWalletNext;
+
+    @BindView(R2.id.wallet_confirm_warn)
+    public TextView mWalletConfirmWarn;
+
+    @BindString(R2.string.wallet_empty)
+    String mWalletEmpty;
+
+    @BindString(R2.string.wallet_passwd_confirm_warn)
+    String mWalletPasswdWarn;
+
+    @BindColor(R2.color.wallet_passwd_weak_color)
+    int mPasswdWarnColor;
 
     static final ButterKnife.Setter<View, Boolean> STATUS = new ButterKnife.Setter<View, Boolean>() {
         @Override public void set(View view, Boolean value, int index) {
@@ -66,12 +83,25 @@ public class PasswdConfirmActivity extends BaseActivity{
 
     @OnClick(R2.id.wallet_confirm_next)
     public void onNextClick(ImageView imageView){
+        if(TextUtils.isEmpty(mWalletConfirm.getText())){
+            mWalletConfirmWarn.setText(mWalletEmpty);
+            return;
+        }
+        String confirm=mWalletConfirm.getText().toString().trim();
+        if(!confirm.equals(KeyUtil.passwd)){
+            mWalletConfirmWarn.setText(mWalletPasswdWarn);
+            mWalletConfirmWarn.setTextColor(mPasswdWarnColor);
+        }
+        //ARouter.getInstance().build("/wallet/PasswdConfirmActivity").navigation();
 
     }
 
     @OnTextChanged(value = R2.id.wallet_confirm, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
     void onWalletNameAfterTextChanged(Editable s) {
         ButterKnife.apply(mWalletConfirmLine,STATUS, !TextUtils.isEmpty(s.toString()));
+        if(TextUtils.isEmpty(s.toString())){
+            mWalletConfirmWarn.setText("");
+        }
     }
 
 }
