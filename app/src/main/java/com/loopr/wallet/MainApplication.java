@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.loopr.wallet.common.AppGlobal;
+import com.loopr.wallet.di.DaggerAppComponent;
 
 import io.realm.Realm;
 
@@ -36,6 +37,11 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         Realm.init(this);
+        DaggerAppComponent
+                .builder()
+                .application(this)
+                .build()
+                .inject(this);
 
     }
 }

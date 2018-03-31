@@ -18,12 +18,15 @@ import com.loopr.wallet.wallet.R;
 import com.loopr.wallet.wallet.R2;
 import com.loopr.wallet.wallet.util.KeyUtil;
 
+import java.security.SecureRandom;
+
 import butterknife.BindColor;
 import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnTextChanged;
+import io.reactivex.Single;
 
 /**
  * Created by snow on 2018/3/29.
@@ -93,7 +96,6 @@ public class PasswdConfirmActivity extends BaseActivity{
             mWalletConfirmWarn.setTextColor(mPasswdWarnColor);
         }
         //ARouter.getInstance().build("/wallet/PasswdConfirmActivity").navigation();
-
     }
 
     @OnTextChanged(value = R2.id.wallet_confirm, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
@@ -102,6 +104,15 @@ public class PasswdConfirmActivity extends BaseActivity{
         if(TextUtils.isEmpty(s.toString())){
             mWalletConfirmWarn.setText("");
         }
+    }
+
+    public Single<String> generatePassword() {
+        return Single.fromCallable(() -> {
+            byte bytes[] = new byte[256];
+            SecureRandom random = new SecureRandom();
+            random.nextBytes(bytes);
+            return new String(bytes);
+        });
     }
 
 }
