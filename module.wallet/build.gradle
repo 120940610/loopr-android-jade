@@ -29,6 +29,10 @@ android {
         }
     }
 
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -50,5 +54,8 @@ dependencies {
     //LifeCycle
     compile gradle.lifecycleRuntime
     compile gradle.lifecycleExtensions
+
+    implementation gradle.rxjava
+    implementation gradle.rxAndroid
 
 }

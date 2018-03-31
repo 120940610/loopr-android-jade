@@ -6,6 +6,8 @@ import android.content.Context;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.loopr.wallet.common.AppGlobal;
 
+import io.realm.Realm;
+
 /**
  * Created by snow on 2018/3/11.
  */
@@ -33,5 +35,7 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Realm.init(this);
+
     }
 }
