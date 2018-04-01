@@ -101,7 +101,9 @@ public class CreateWalletActivity extends BaseActivity{
             }
         });
 
+
     }
+
 
     @OnClick(R2.id.wallet_next_img)
     public void onNextClick(ImageView imageView){

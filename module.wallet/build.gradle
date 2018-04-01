@@ -55,6 +55,7 @@ dependencies {
     compile gradle.lifecycleRuntime
     compile gradle.lifecycleExtensions
 
+    //Rxjava
     implementation gradle.rxjava
     implementation gradle.rxAndroid
 
@@ -64,5 +65,20 @@ dependencies {
     implementation gradle.daggerAndroidSupport
     annotationProcessor gradle.daggerAndroidProcessor
     implementation gradle.daggerAndroid
+
+    //Etherium client
+    implementation gradle.ethweb3j
+    implementation gradle.geth
+
+    // Http client
+    implementation gradle.retrofit
+    implementation gradle.retrofitConverterGson
+    implementation gradle.retrofitRxjava
+
+    //Okhttp
+    implementation gradle.okhttp
+
+    //Gson
+    implementation gradle.gson
 
 }
