@@ -28,18 +28,23 @@ public class RepositoriesModule {
 
 	@Singleton
 	@Provides
+	WalletRepositoryType provideWalletRepository(
+			OkHttpClient okHttpClient,
+			PreferenceRepositoryType preferenceRepositoryType,
+			AccountKeystoreService accountKeystoreService,
+			EthereumNetworkRepositoryType networkRepository) {
+		return new WalletRepository(
+				okHttpClient, preferenceRepositoryType, accountKeystoreService, networkRepository);
+	}
+
+	@Singleton
+	@Provides
 	AccountKeystoreService provideAccountKeyStoreService(Context context) {
         File file = new File(context.getFilesDir(), "keystore/keystore");
 		//return new GethKeystoreAccountService(file);
 		return null;
 	}
 
-	@Singleton
-    @Provides
-	TickerService provideTickerService(OkHttpClient httpClient, Gson gson) {
-	    //return new TrustWalletTickerService(httpClient, gson);
-		return null;
-    }
 
 	@Singleton
 	@Provides
@@ -49,14 +54,4 @@ public class RepositoriesModule {
 		return new EthereumNetworkRepository(preferenceRepository, tickerService);
 	}
 
-	@Singleton
-	@Provides
-	WalletRepositoryType provideWalletRepository(
-            OkHttpClient okHttpClient,
-			PreferenceRepositoryType preferenceRepositoryType,
-			AccountKeystoreService accountKeystoreService,
-			EthereumNetworkRepositoryType networkRepository) {
-		return new WalletRepository(
-		        okHttpClient, preferenceRepositoryType, accountKeystoreService, networkRepository);
-	}
 }
