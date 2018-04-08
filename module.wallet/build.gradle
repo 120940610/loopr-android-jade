@@ -4,7 +4,10 @@ apply plugin: 'com.jakewharton.butterknife'
 android {
     compileSdkVersion 26
 
-
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     defaultConfig {
         minSdkVersion 19
@@ -27,11 +30,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-
-    compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
     }
 }
 

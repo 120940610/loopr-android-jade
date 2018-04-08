@@ -45,6 +45,12 @@ public class RepositoriesModule {
 		return null;
 	}
 
+	@Singleton
+	@Provides
+	TickerService provideTickerService(OkHttpClient httpClient, Gson gson) {
+		return null;
+	}
+
 
 	@Singleton
 	@Provides

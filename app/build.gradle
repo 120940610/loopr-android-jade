@@ -58,4 +58,11 @@ dependencies {
     implementation gradle.daggerAndroidSupport
     annotationProcessor gradle.daggerAndroidProcessor
     implementation gradle.daggerAndroid
+
+
+    //Okhttp
+    implementation gradle.okhttp
+
+    //Gson
+    implementation gradle.gson
 }

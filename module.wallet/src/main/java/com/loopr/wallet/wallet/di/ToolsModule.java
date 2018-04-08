@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 import com.google.gson.Gson;
+import com.loopr.wallet.common.AppGlobal;
 import com.loopr.wallet.wallet.repo.PasswordStore;
 import com.loopr.wallet.wallet.repo.WalletPasswordStore;
 import com.loopr.wallet.wallet.util.LogInterceptor;
@@ -17,8 +18,8 @@ import okhttp3.OkHttpClient;
 @Module
 public class ToolsModule {
 	@Provides
-	Context provideContext(Application application) {
-		return application.getApplicationContext();
+	Context provideContext() {
+		return AppGlobal.getContext();
 	}
 
 

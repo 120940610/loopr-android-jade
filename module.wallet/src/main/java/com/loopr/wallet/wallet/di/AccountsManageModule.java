@@ -13,7 +13,7 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-class AccountsManageModule {
+public class AccountsManageModule {
 
 	@Provides
 	WalletsViewModelFactory provideAccountsManageViewModelFactory(
