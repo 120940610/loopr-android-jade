@@ -10,7 +10,10 @@ import com.loopr.wallet.wallet.repo.SharedPreferenceRepository;
 import com.loopr.wallet.wallet.repo.WalletRepository;
 import com.loopr.wallet.wallet.repo.WalletRepositoryType;
 import com.loopr.wallet.wallet.service.AccountKeystoreService;
+import com.loopr.wallet.wallet.service.GethKeystoreAccountService;
 import com.loopr.wallet.wallet.service.TickerService;
+import com.loopr.wallet.wallet.service.WalletTickerService;
+
 import java.io.File;
 import javax.inject.Singleton;
 
@@ -41,14 +44,13 @@ public class RepositoriesModule {
 	@Provides
 	AccountKeystoreService provideAccountKeyStoreService(Context context) {
         File file = new File(context.getFilesDir(), "keystore/keystore");
-		//return new GethKeystoreAccountService(file);
-		return null;
+		return new GethKeystoreAccountService(file);
 	}
 
 	@Singleton
 	@Provides
 	TickerService provideTickerService(OkHttpClient httpClient, Gson gson) {
-		return null;
+		return new WalletTickerService(httpClient, gson);
 	}
 
 
