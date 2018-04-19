@@ -18,5 +18,10 @@
     <string name="wallet_passwd_confirm_des">Set password again</string>
     <string name="wallet_passwd_confirm_warn">Please input the consistant password</string>
 
+    <string name="wallet_congrate">Congratulations</string>
+    <string name="wallet_congrate_des">Your wallet has been generated.Please take a moment to backup your wallet by writing down the mnemonic words on paper.Mnemonic words are required to restore your wallets.Please do not share your mnemonic words with anyone,nor save them on cloud storage.</string>
+    <string name="wallet_backup">Backup Now</string>
+
+
 
 </resources>

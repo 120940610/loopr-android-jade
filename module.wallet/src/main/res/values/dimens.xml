@@ -14,4 +14,6 @@
     <dimen name="wallet_edittext_line">1dp</dimen>
     <dimen name="wallet_edittext_margin_top">2dp</dimen>
 
+    <dimen name="wallet_backup_top">60dp</dimen>
+
 </resources>

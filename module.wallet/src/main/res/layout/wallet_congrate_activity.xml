@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.loopr.wallet.common.ui.widget.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftDrawable="@drawable/back_arror"
+        app:titleInCenter="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_12"
+        android:layout_below="@+id/title_bar">
+
+        <ImageView
+            android:id="@+id/success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/dp_12"
+            android:src="@drawable/success"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallet_congrate"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/success"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_20" />
+
+        <TextView
+            android:id="@+id/wallet_congrate_des_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallet_congrate_des"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/success"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/wallet_backup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/wallet_rectangle_black_bg"
+            android:padding="12dp"
+            android:textSize="@dimen/sp_16"
+            android:layout_below="@+id/wallet_congrate_des_tv"
+            android:layout_marginTop="@dimen/wallet_backup_top"
+            android:text="@string/wallet_backup"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</RelativeLayout>

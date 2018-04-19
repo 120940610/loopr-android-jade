@@ -18,5 +18,14 @@
         <activity
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".ui.activity.ManageWalletActivity" />
+
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".ui.activity.CongrateActivity" />
+
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".ui.activity.BackUpActivity" />
+
     </application>
 </manifest>
