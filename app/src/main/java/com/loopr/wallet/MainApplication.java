@@ -3,6 +3,7 @@ package com.loopr.wallet;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDexApplication;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.loopr.wallet.common.AppGlobal;
@@ -19,7 +20,7 @@ import io.realm.Realm;
  * Created by snow on 2018/3/11.
  */
 
-public class MainApplication extends Application implements HasActivityInjector{
+public class MainApplication extends MultiDexApplication implements HasActivityInjector{
 
     private boolean mHasAttachBaseContext;
 

@@ -65,4 +65,7 @@ dependencies {
 
     //Gson
     implementation gradle.gson
+
+    implementation "com.android.support:multidex:1.0.2"
+
 }
