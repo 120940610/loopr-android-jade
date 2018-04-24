@@ -80,3 +80,6 @@ dependencies {
     implementation gradle.gson
 
 }
+
+configurations.maybeCreate("default")
+artifacts.add("default", file('trustnative.aar'))
