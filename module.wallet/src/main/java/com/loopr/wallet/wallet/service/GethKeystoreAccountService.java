@@ -98,8 +98,8 @@ public class GethKeystoreAccountService implements AccountKeystoreService {
             BigInt gasPriceBI = new BigInt(0);
             gasPriceBI.setString(gasPrice.toString(), 10);
 
-            BigInt gasLimitBI = new BigInt(0);
-            gasLimitBI.setString(gasLimit.toString(), 10);
+            long gasLimitBI = 0;
+            //StringgasLimitBI(gasLimit.toString(), 10);
 
             Transaction tx = new Transaction(
                     nonce,

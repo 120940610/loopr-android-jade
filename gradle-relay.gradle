@@ -30,7 +30,7 @@ gradle.ext.daggerAndroid= "com.google.dagger:dagger-android:2.11"
 
 //Etherium client
 gradle.ext.ethweb3j= "org.web3j:core:3.0.1-android"
-gradle.ext.geth= "org.ethereum:geth:1.7.0"
+gradle.ext.geth= "org.ethereum:geth:1.8.0"
 
 //Retrofit client
 gradle.ext.retrofit= "com.squareup.retrofit2:retrofit:2.3.0"

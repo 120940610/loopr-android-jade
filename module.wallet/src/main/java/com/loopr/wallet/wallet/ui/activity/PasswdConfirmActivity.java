@@ -115,6 +115,9 @@ public class PasswdConfirmActivity extends BaseActivity{
             mWalletConfirmWarn.setText(mWalletPasswdWarn);
             mWalletConfirmWarn.setTextColor(mPasswdWarnColor);
         }
+
+        viewModel.newWallet();
+
         //ARouter.getInstance().build("/wallet/PasswdConfirmActivity").navigation();
     }
 
@@ -124,15 +127,6 @@ public class PasswdConfirmActivity extends BaseActivity{
         if(TextUtils.isEmpty(s.toString())){
             mWalletConfirmWarn.setText("");
         }
-    }
-
-    public Single<String> generatePassword() {
-        return Single.fromCallable(() -> {
-            byte bytes[] = new byte[256];
-            SecureRandom random = new SecureRandom();
-            random.nextBytes(bytes);
-            return new String(bytes);
-        });
     }
 
 }
