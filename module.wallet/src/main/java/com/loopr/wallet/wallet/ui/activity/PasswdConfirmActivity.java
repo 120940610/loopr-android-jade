@@ -117,8 +117,7 @@ public class PasswdConfirmActivity extends BaseActivity{
         }
 
         viewModel.newWallet();
-
-        //ARouter.getInstance().build("/wallet/PasswdConfirmActivity").navigation();
+        ARouter.getInstance().build("/wallet/CongrateActivity").navigation();
     }
 
     @OnTextChanged(value = R2.id.wallet_confirm, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
