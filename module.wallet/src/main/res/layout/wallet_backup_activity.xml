@@ -18,47 +18,52 @@
         android:padding="@dimen/dp_15"
         android:layout_below="@+id/title_bar">
 
-        <ImageView
-            android:id="@+id/success"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="@dimen/dp_12"
-            android:src="@drawable/success"/>
         <TextView
+            android:id="@+id/wallet_backup_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/wallet_congrate"
+            android:text="@string/wallet_backup_title"
             android:layout_marginTop="@dimen/dp_12"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/success"
-            android:layout_marginLeft="@dimen/dp_12"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_20" />
 
         <TextView
-            android:id="@+id/wallet_congrate_des_tv"
+            android:id="@+id/wallet_backup_des_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/wallet_congrate_des"
+            android:text="@string/wallet_backup_des"
             android:layout_marginTop="@dimen/dp_12"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/success"
+            android:layout_below="@+id/wallet_backup_tv"
             android:textColor="@color/grey"
             android:textSize="@dimen/sp_16" />
-
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/grid_recycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/wallet_backup_grid_top"
+            android:layout_below="@+id/wallet_backup_des_tv"/>
         <TextView
-            android:id="@+id/wallet_backup"
+            android:id="@+id/wallet_backup_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grid_recycle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="74dp"
+            android:text="@string/wallet_backup_move_next"/>
+        <TextView
+            android:id="@+id/wallet_verify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:background="@drawable/wallet_rectangle_black_bg"
             android:padding="12dp"
             android:textSize="@dimen/sp_16"
-            android:layout_below="@+id/wallet_congrate_des_tv"
-            android:layout_marginTop="@dimen/wallet_backup_top"
-            android:text="@string/wallet_backup"
+            android:layout_below="@+id/wallet_backup_move"
+            android:layout_marginTop="@dimen/wallet_backup_btn_top"
+            android:text="@string/wallet_verify"
             android:textColor="@color/white" />
     </RelativeLayout>
 </RelativeLayout>

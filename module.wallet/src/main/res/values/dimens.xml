@@ -4,6 +4,7 @@
     <dimen name="dp_38">38dp</dimen>
     <dimen name="dp_14">14dp</dimen>
     <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
     <dimen name="sp_16">16sp</dimen>
     <dimen name="sp_20">20sp</dimen>
 
@@ -15,5 +16,8 @@
     <dimen name="wallet_edittext_margin_top">2dp</dimen>
 
     <dimen name="wallet_backup_top">60dp</dimen>
+    <dimen name="wallet_backup_grid_top">45dp</dimen>
+
+    <dimen name="wallet_backup_btn_top">117dp</dimen>
 
 </resources>
