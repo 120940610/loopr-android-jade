@@ -26,6 +26,9 @@
     <string name="wallet_backup_move_next">Next 12 words</string>
     <string name="wallet_backup_move_previous">Previous 12 words</string>
     <string name="wallet_verify">Verify Now</string>
+    <string name="wallet_verify_dialog_msg">Please make sure you have backed up mnemonic</string>
+    <string name="wallet_verify_dialog_cancel">Cancel</string>
+    <string name="wallet_verify_dialog_confirm">Confirm</string>
 
 
 
