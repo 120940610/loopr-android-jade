@@ -19,5 +19,9 @@
     <dimen name="wallet_backup_grid_top">45dp</dimen>
 
     <dimen name="wallet_backup_btn_top">117dp</dimen>
+    <dimen name="wallet_import_btn_top">77dp</dimen>
+
+    <dimen name="wallet_import_keystore_btn_top">26dp</dimen>
+
 
 </resources>
