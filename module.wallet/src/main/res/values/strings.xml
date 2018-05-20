@@ -45,6 +45,7 @@
     <string name="wallet_import_keystore">Please input your keystore</string>
     <string name="wallet_import_pwd">Please input your password</string>
     <string name="wallet_import_mnemonic">Please input your mnemonic</string>
+    <string name="wallet_import_private">Please input your private key</string>
 
 
 
