@@ -5,6 +5,7 @@
     <dimen name="dp_14">14dp</dimen>
     <dimen name="dp_12">12dp</dimen>
     <dimen name="dp_15">15dp</dimen>
+    <dimen name="sp_14">14sp</dimen>
     <dimen name="sp_16">16sp</dimen>
     <dimen name="sp_20">20sp</dimen>
 
@@ -22,6 +23,8 @@
     <dimen name="wallet_import_btn_top">77dp</dimen>
 
     <dimen name="wallet_import_keystore_btn_top">26dp</dimen>
+    <dimen name="wallet_import_tab_indicator">1dp</dimen>
+    <dimen name="wallet_import_tab_indicator_width">34dp</dimen>
 
 
 </resources>

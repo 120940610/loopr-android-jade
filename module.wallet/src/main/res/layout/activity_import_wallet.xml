@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     android:fitsSystemWindows="true">
 
     <com.loopr.wallet.common.ui.widget.CommonTitleBar
@@ -11,19 +13,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:leftDrawable="@drawable/back_arror"
+        app:title="@string/wallet_import_title"
+        app:titleColor="@color/black"
         app:titleInCenter="true" />
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimaryDark"
+        android:background="@null"
+        app:tabTextColor="@color/wallet_import_common"
         android:elevation="8dp"
-        app:tabIndicatorColor="@color/white" />
+        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorHeight="@dimen/wallet_import_tab_indicator"
+        app:tabSelectedTextColor="@color/black" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

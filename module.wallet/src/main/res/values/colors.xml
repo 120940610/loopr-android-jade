@@ -11,5 +11,8 @@
     <color name="wallet_import_color">#F8F8F8</color>
 
     <color name="wallet_import_pwd_color">#19000000</color>
+    <color name="wallet_import_common">#4c000000</color>
+
+
 
 </resources>

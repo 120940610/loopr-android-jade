@@ -30,6 +30,7 @@
     <string name="wallet_verify_dialog_cancel">Cancel</string>
     <string name="wallet_verify_dialog_confirm">Confirm</string>
 
+    <string name="wallet_import_title">Import Wallet</string>
     <string name="wallet_import_tab_mnemonic">Mnemonic</string>
     <string name="wallet_import_tab_keystore">Keystore</string>
     <string name="wallet_import_tab_private">Private Key</string>
