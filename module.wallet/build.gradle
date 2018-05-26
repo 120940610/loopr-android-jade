@@ -85,5 +85,7 @@ dependencies {
 
     //Gson
     implementation gradle.gson
+    compile 'io.github.novacrypto:BIP39:0.1.9'
+
 
 }

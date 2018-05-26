@@ -1,40 +1,27 @@
 package com.loopr.wallet.wallet.ui.activity;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.text.Editable;
-import android.text.TextUtils;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.loopr.wallet.common.AppGlobal;
 import com.loopr.wallet.common.ui.activity.BaseActivity;
 import com.loopr.wallet.common.ui.widget.CommonTitleBar;
-import com.loopr.wallet.common.utils.LogUtils;
 import com.loopr.wallet.wallet.R;
 import com.loopr.wallet.wallet.R2;
-import com.loopr.wallet.wallet.entity.Wallet;
-import com.loopr.wallet.wallet.util.KeyUtil;
-import com.loopr.wallet.wallet.viewmodel.WalletsViewModel;
-import com.loopr.wallet.wallet.viewmodel.WalletsViewModelFactory;
+import com.loopr.wallet.wallet.entity.Conf;
 
 import java.security.SecureRandom;
+import java.util.Arrays;
 
-import javax.inject.Inject;
-
-import butterknife.BindColor;
-import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.OnTextChanged;
-import dagger.android.AndroidInjection;
-import io.reactivex.Single;
+import io.github.novacrypto.bip39.MnemonicGenerator;
+import io.github.novacrypto.bip39.Words;
+import io.github.novacrypto.bip39.wordlists.English;
 
 /**
  * Created by snow on 2018/4/19.
@@ -66,6 +53,14 @@ public class CongrateActivity extends BaseActivity{
 
     @OnClick(R2.id.wallet_backup)
     public void onNextClick(TextView textView){
+        StringBuilder sb = new StringBuilder();
+        byte[] entropy = new byte[Words.TWENTY_FOUR.byteLength()];
+        new SecureRandom().nextBytes(entropy);
+        new MnemonicGenerator(English.INSTANCE)
+                .createMnemonic(entropy, sb::append);
+        String mn=sb.toString();
+        Conf.mnemonic=Arrays.asList(mn.split(" "));
+        System.out.println("MnemonicGenerator ："+Conf.mnemonic.get(3));
         ARouter.getInstance().build("/wallet/BackUpActivity").navigation();
     }
 

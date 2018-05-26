@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
@@ -14,6 +15,8 @@ import com.loopr.wallet.common.ui.activity.BaseActivity;
 import com.loopr.wallet.common.ui.widget.CommonTitleBar;
 import com.loopr.wallet.wallet.R;
 import com.loopr.wallet.wallet.R2;
+import com.loopr.wallet.wallet.entity.Conf;
+import com.loopr.wallet.wallet.ui.adapter.MnenoricRecycleViewAdapter;
 import com.loopr.wallet.wallet.util.ViewUtils;
 
 import butterknife.BindString;
@@ -46,12 +49,17 @@ public class BackUpActivity extends BaseActivity{
     @BindString(R2.string.wallet_verify_dialog_confirm)
     String mWalletVerifyConfirm;
 
+    MnenoricRecycleViewAdapter mnenoricRecycleViewAdapter;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wallet_backup_activity);
         ButterKnife.bind(this);
-
+        mnenoricRecycleViewAdapter=new MnenoricRecycleViewAdapter(this);
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this,3));
+        mRecyclerView.setAdapter(mnenoricRecycleViewAdapter);
+        mnenoricRecycleViewAdapter.setData(Conf.mnemonic);
         commonTitleBar.setLeftOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
