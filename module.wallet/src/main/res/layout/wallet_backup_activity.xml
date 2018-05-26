@@ -52,10 +52,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/grid_recycle"
             android:layout_centerHorizontal="true"
-            android:drawableRight="@drawable/next_arror"
             android:layout_marginTop="74dp"
             android:textColor="@color/black"
-            android:visibility="gone"
+            android:visibility="visible"
+            android:textSize="@dimen/sp_16"
             android:text="@string/wallet_backup_move_next"/>
 
         <TextView
@@ -64,10 +64,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/grid_recycle"
             android:layout_centerHorizontal="true"
-            android:drawableLeft="@drawable/back_arror"
             android:layout_marginTop="74dp"
             android:textColor="@color/black"
             android:visibility="gone"
+            android:textSize="@dimen/sp_16"
             android:text="@string/wallet_backup_move_previous"/>
         <TextView
             android:id="@+id/wallet_verify"
@@ -80,6 +80,7 @@
             android:layout_below="@+id/wallet_backup_next"
             android:layout_marginTop="@dimen/wallet_backup_btn_top"
             android:text="@string/wallet_verify"
+            android:visibility="gone"
             android:textColor="@color/white" />
     </RelativeLayout>
 </RelativeLayout>

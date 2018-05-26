@@ -1,6 +1,7 @@
 package com.loopr.wallet.wallet.ui.activity;
 
 import android.content.DialogInterface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,12 +15,15 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.loopr.wallet.common.ui.activity.BaseActivity;
 import com.loopr.wallet.common.ui.widget.CommonTitleBar;
+import com.loopr.wallet.common.utils.ScreenUtils;
 import com.loopr.wallet.wallet.R;
 import com.loopr.wallet.wallet.R2;
 import com.loopr.wallet.wallet.entity.Conf;
 import com.loopr.wallet.wallet.ui.adapter.MnenoricRecycleViewAdapter;
 import com.loopr.wallet.wallet.util.ViewUtils;
 
+import butterknife.BindBitmap;
+import butterknife.BindDrawable;
 import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,8 +54,15 @@ public class BackUpActivity extends BaseActivity{
 
     @BindString(R2.string.wallet_verify_dialog_cancel)
     String mWalletVerifyCancel;
+
     @BindString(R2.string.wallet_verify_dialog_confirm)
     String mWalletVerifyConfirm;
+
+    @BindDrawable(R2.drawable.next_arror)
+    Drawable mNextArror;
+
+    @BindDrawable(R2.drawable.previous_arror)
+    Drawable mBackArror;
 
     MnenoricRecycleViewAdapter mnenoricRecycleViewAdapter;
 
@@ -65,6 +76,11 @@ public class BackUpActivity extends BaseActivity{
         setContentView(R.layout.wallet_backup_activity);
         ButterKnife.bind(this);
         initData();
+        mNextArror.setBounds(8, 4, ScreenUtils.dip2px(this,12), ScreenUtils.dip2px(this,12));
+        mBackArror.setBounds(12, 4, mBackArror.getIntrinsicWidth(), ScreenUtils.dip2px(this,12));
+
+        mWalletBackupNext.setCompoundDrawables(null, null, mNextArror, null);
+        mWalletBackupPrevious.setCompoundDrawables(mBackArror, null, null, null);
         mnenoricRecycleViewAdapter=new MnenoricRecycleViewAdapter(this);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this,3));
         mRecyclerView.setAdapter(mnenoricRecycleViewAdapter);
@@ -110,12 +126,20 @@ public class BackUpActivity extends BaseActivity{
 
     @OnClick(R2.id.wallet_backup_next)
     public void onNextClick(TextView textView){
+        textView.setVisibility(View.GONE);
+        mnenoricRecycleViewAdapter.setData(mNPart2);
+        mWalletBackupPrevious.setVisibility(View.VISIBLE);
+        mWalletVerify.setVisibility(View.VISIBLE);
+
         //ARouter.getInstance().build("/wallet/BackUpActivity").navigation();
     }
 
     @OnClick(R2.id.wallet_backup_previous)
     public void onPreviousClick(TextView textView){
-        //ARouter.getInstance().build("/wallet/BackUpActivity").navigation();
+        textView.setVisibility(View.GONE);
+        mnenoricRecycleViewAdapter.setData(mNPart1);
+        mWalletBackupNext.setVisibility(View.VISIBLE);
+        mWalletVerify.setVisibility(View.GONE);
     }
 
 }
