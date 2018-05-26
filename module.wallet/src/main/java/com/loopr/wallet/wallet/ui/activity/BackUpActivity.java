@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.SparseArray;
 import android.view.View;
 import android.widget.TextView;
 
@@ -35,8 +36,11 @@ public class BackUpActivity extends BaseActivity{
     @BindView(R2.id.wallet_verify)
     public TextView mWalletVerify;
 
-    @BindView(R2.id.wallet_backup_move)
-    public TextView mWalletBackupMove;
+    @BindView(R2.id.wallet_backup_next)
+    public TextView mWalletBackupNext;
+
+    @BindView(R2.id.wallet_backup_previous)
+    public TextView mWalletBackupPrevious;
 
     @BindView(R2.id.grid_recycle)
     public RecyclerView mRecyclerView;
@@ -51,21 +55,40 @@ public class BackUpActivity extends BaseActivity{
 
     MnenoricRecycleViewAdapter mnenoricRecycleViewAdapter;
 
+    SparseArray<String> mNPart1=new SparseArray<>();
+    SparseArray<String> mNPart2=new SparseArray<>();
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wallet_backup_activity);
         ButterKnife.bind(this);
+        initData();
         mnenoricRecycleViewAdapter=new MnenoricRecycleViewAdapter(this);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this,3));
         mRecyclerView.setAdapter(mnenoricRecycleViewAdapter);
-        mnenoricRecycleViewAdapter.setData(Conf.mnemonic);
+        mWalletBackupNext.setVisibility(View.VISIBLE);
+        mnenoricRecycleViewAdapter.setData(mNPart1);
         commonTitleBar.setLeftOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
+    }
+
+
+    private void initData(){
+        int count=0;
+        for (String mn : Conf.mnemonic){
+            if(count<12){
+                mNPart1.put(count+1,mn);
+            }else {
+                mNPart2.put(count+1,mn);
+            }
+            count++;
+        }
     }
 
     @OnClick(R2.id.wallet_verify)
@@ -85,8 +108,13 @@ public class BackUpActivity extends BaseActivity{
         });
     }
 
-    @OnClick(R2.id.wallet_backup_move)
-    public void onMoveClick(TextView textView){
+    @OnClick(R2.id.wallet_backup_next)
+    public void onNextClick(TextView textView){
+        //ARouter.getInstance().build("/wallet/BackUpActivity").navigation();
+    }
+
+    @OnClick(R2.id.wallet_backup_previous)
+    public void onPreviousClick(TextView textView){
         //ARouter.getInstance().build("/wallet/BackUpActivity").navigation();
     }
 

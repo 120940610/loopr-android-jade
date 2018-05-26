@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:gravity="center"
     android:background="@color/white">
 
     <TextView
         android:id="@+id/wallet_mnenoric_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/dp_12"
-        android:padding="2dp"
-        android:text="12"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/wallet_circle_s_bg"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="6"
         android:textSize="8sp" />
 
     <TextView
@@ -20,8 +21,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/wallet_mnenoric_num"
-        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="@dimen/dp_24"
         android:text="@string/wallet_verify"
         android:textColor="@color/black"
-        android:textSize="@dimen/sp_16" />
+        android:textSize="@dimen/sp_14" />
 </RelativeLayout>

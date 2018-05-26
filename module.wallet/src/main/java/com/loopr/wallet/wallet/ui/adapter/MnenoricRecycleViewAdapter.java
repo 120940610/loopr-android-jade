@@ -2,6 +2,7 @@ package com.loopr.wallet.wallet.ui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,26 +12,24 @@ import com.loopr.wallet.common.utils.LogUtils;
 import com.loopr.wallet.wallet.R;
 import com.loopr.wallet.wallet.R2;
 
-import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by zefeng.wzf on 2018/5/26.
+ * Created by snow on 2018/5/26.
  */
 
 public class MnenoricRecycleViewAdapter extends RecyclerView.Adapter<MnenoricRecycleViewAdapter.NormalViewHolder> {
     private final LayoutInflater mLayoutInflater;
     private final Context mContext;
-    private List<String> mData;
+    private SparseArray<String> mData;
 
     public MnenoricRecycleViewAdapter(Context context) {
         mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
     }
 
-    public void setData(List<String> listData) {
+    public void setData(SparseArray<String> listData) {
         this.mData = listData;
         notifyDataSetChanged();
     }
@@ -42,9 +41,10 @@ public class MnenoricRecycleViewAdapter extends RecyclerView.Adapter<MnenoricRec
 
     @Override
     public void onBindViewHolder(NormalViewHolder holder, int position) {
-        holder.mNenoricNum.setText(position+1);
-        holder.mNenoricWord.setText(mData.get(position));
-
+        int key =mData.keyAt(position);
+        String value=mData.get(key);
+        holder.mNenoricNum.setText(String.valueOf(key));
+        holder.mNenoricWord.setText(value);
     }
 
     @Override
@@ -52,12 +52,13 @@ public class MnenoricRecycleViewAdapter extends RecyclerView.Adapter<MnenoricRec
         return (mData == null || mData.size()==0)? 0 : mData.size();
     }
 
+
     public static class NormalViewHolder extends RecyclerView.ViewHolder {
         @BindView(R2.id.wallet_mnenoric_num)
-        TextView mNenoricNum;
+        public TextView mNenoricNum;
 
         @BindView(R2.id.wallet_mnenoric_word)
-        TextView mNenoricWord;
+        public TextView mNenoricWord;
 
 
         NormalViewHolder(View view) {
