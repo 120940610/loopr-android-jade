@@ -26,5 +26,9 @@
     <dimen name="wallet_import_tab_indicator">1dp</dimen>
     <dimen name="wallet_import_tab_indicator_width">34dp</dimen>
 
+    <dimen name="wallet_mn_verify_width">165dp</dimen>
+    <dimen name="wallet_mn_verify_height">47dp</dimen>
+    <dimen name="wallet_mn_verify_margin_top">62dp</dimen>
+
 
 </resources>

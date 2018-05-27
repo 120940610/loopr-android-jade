@@ -119,7 +119,7 @@ public class BackUpActivity extends BaseActivity{
 
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+                ARouter.getInstance().build("/wallet/MnonoricVerifyActivity").navigation();
             }
         });
     }

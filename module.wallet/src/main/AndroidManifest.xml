@@ -28,5 +28,9 @@
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".ui.activity.BackUpActivity" />
 
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".ui.activity.MnonoricVerifyActivity" />
+
     </application>
 </manifest>

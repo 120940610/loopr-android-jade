@@ -48,6 +48,8 @@
     <string name="wallet_import_mnemonic">Please input your mnemonic</string>
     <string name="wallet_import_private">Please input your private key</string>
 
+    <string name="wallet_mn_verify_title">Verification</string>
+    <string name="wallet_mn_verify_tip">%1$d/24.Which of the following is the %2$dth word of your mnemonic?</string>
 
 
 
