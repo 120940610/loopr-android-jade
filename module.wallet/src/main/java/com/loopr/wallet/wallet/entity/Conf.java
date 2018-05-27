@@ -1,5 +1,9 @@
 package com.loopr.wallet.wallet.entity;
 
+import android.util.SparseArray;
+
+import com.loopr.wallet.wallet.util.RandomUtil;
+
 import java.util.List;
 
 /**
@@ -8,4 +12,7 @@ import java.util.List;
 
 public class Conf {
     public static List<String> mnemonic=null;
+    public static SparseArray<String> mNPart=null;
+    public static Object[] random=null;
+
 }

@@ -46,7 +46,6 @@ public class MnonoricVerifyActivity extends BaseActivity{
     @BindView(R2.id.view_flow)
     ViewFlow mViewFlow;
 
-    SparseArray<String> mNPart=new SparseArray<>();
     ViewFlowAdapter mViewFlowAdapter;
 
     @Override
@@ -57,7 +56,7 @@ public class MnonoricVerifyActivity extends BaseActivity{
         initData();
         mViewFlowAdapter=new ViewFlowAdapter(mViewFlow,this);
         mViewFlow.setAdapter(mViewFlowAdapter);
-        mViewFlowAdapter.setData(mNPart);
+        mViewFlowAdapter.setData(Conf.mNPart);
         mViewFlow.setOnViewSwitchListener(new ViewFlow.ViewSwitchListener() {
             @Override
             public void onSwitched(View view, int position) {
@@ -74,14 +73,14 @@ public class MnonoricVerifyActivity extends BaseActivity{
 
 
     private void initData(){
-        Object[] random=RandomUtil.random24();
-        for (int i=0;i<random.length;i++){
-            int key=((Integer)random[i]).intValue();
-            LogUtils.d("TAG","int: "+i);
-            LogUtils.d("TAG","key: "+key);
-            LogUtils.d("TAG","value: "+ Conf.mnemonic.get(key-1));
-            mNPart.put(key, Conf.mnemonic.get(key-1));
-        }
+        Conf.mNPart=new SparseArray<>();
+        Conf.random=RandomUtil.random24();
+
+        int key=((Integer)Conf.random[0]).intValue();
+        LogUtils.d("TAG","int: "+0);
+        LogUtils.d("TAG","key: "+key);
+        LogUtils.d("TAG","value: "+ Conf.mnemonic.get(key-1));
+        Conf.mNPart.put(key, Conf.mnemonic.get(key-1));
     }
 
 
