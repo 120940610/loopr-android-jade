@@ -14,64 +14,10 @@
         app:titleColor="@color/black"
         app:titleInCenter="true" />
 
-
-    <TextView
-        android:id="@+id/wallet_mn_verify_tip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/dp_12"
-        android:text="@string/wallet_mn_verify_tip"
-        android:layout_below="@+id/title_bar"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sp_20" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/wallet_mn_verify_margin_top"
-        android:layout_below="@+id/wallet_mn_verify_tip">
-
-        <TextView
-            android:id="@+id/wallet_mn_verify_word1"
-            android:layout_width="@dimen/wallet_mn_verify_width"
-            android:layout_height="@dimen/wallet_mn_verify_height"
-            android:text="test1"
-            android:gravity="center"
-            android:background="@drawable/wallet_rectangle_white_bg"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_16" />
-
-        <TextView
-            android:id="@+id/wallet_mn_verify_word2"
-            android:layout_width="@dimen/wallet_mn_verify_width"
-            android:layout_height="@dimen/wallet_mn_verify_height"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="test2"
-            android:background="@drawable/wallet_rectangle_white_bg"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_16" />
-        <TextView
-            android:id="@+id/wallet_mn_verify_word3"
-            android:layout_width="@dimen/wallet_mn_verify_width"
-            android:layout_height="@dimen/wallet_mn_verify_height"
-            android:text="test3"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/wallet_rectangle_white_bg"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_16" />
-        <TextView
-            android:id="@+id/wallet_mn_verify_word4"
-            android:layout_width="@dimen/wallet_mn_verify_width"
-            android:layout_height="@dimen/wallet_mn_verify_height"
-            android:text="test4"
-            android:gravity="center"
-            android:background="@drawable/wallet_rectangle_white_bg"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_16" />
-    </LinearLayout>
+    <com.loopr.wallet.common.ui.widget.ViewFlow
+        android:id="@+id/view_flow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar">
+    </com.loopr.wallet.common.ui.widget.ViewFlow>
 </RelativeLayout>
