@@ -14,4 +14,53 @@
         app:titleColor="@color/black"
         app:titleInCenter="true" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_12"
+        android:layout_below="@+id/title_bar">
+    <TextView
+        android:id="@+id/wallet_mn_verify_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_12"
+        android:textColor="@color/black"
+        android:text="@string/wallet_mn_verify_tip"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/wallet_mn_verify_chosed"
+        android:layout_margin="@dimen/dp_12"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_12"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/wallet_verfify_bg"
+        android:layout_marginTop="@dimen/wallet_backup_grid_top"
+        android:layout_below="@+id/wallet_mn_verify_tip"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/wallet_mn_verify_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_12"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/wallet_mn_verify_chosed"/>
+
+    <TextView
+        android:id="@+id/wallet_verify_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wallet_mn_verify_list"
+        android:gravity="center"
+        android:background="@drawable/wallet_rectangle_black_bg"
+        android:padding="12dp"
+        android:textSize="@dimen/sp_16"
+        android:text="@string/generate_wallet"
+        android:textColor="@color/white" />
+    </RelativeLayout>
 </RelativeLayout>

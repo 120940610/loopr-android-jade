@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Conf {
     public static List<String> mnemonic=null;
-    public static SparseArray<String> mNPart=null;
-    public static Object[] random=null;
+    public static List<String> mNRandom=null;
+    public static List<String> mNChose=null;
 
 }

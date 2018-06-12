@@ -2,6 +2,8 @@ package com.loopr.wallet.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.loopr.wallet.R;
 import com.loopr.wallet.common.events.GlobalEvents;
 import com.loopr.wallet.common.ui.activity.BaseActivity;
@@ -20,6 +22,7 @@ import org.greenrobot.eventbus.ThreadMode;
 /**
  * Created by snow on 2018/3/6.
  */
+@Route(path = "/app/MainActivity")
 public class MainActivity extends BaseActivity {
 
     //public ViewPager mViewPager;
