@@ -60,7 +60,7 @@
         android:background="@drawable/wallet_rectangle_black_bg"
         android:padding="12dp"
         android:textSize="@dimen/sp_16"
-        android:text="@string/generate_wallet"
+        android:text="@string/wallet_mn_verify_btn"
         android:textColor="@color/white" />
     </RelativeLayout>
 </RelativeLayout>

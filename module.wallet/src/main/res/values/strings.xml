@@ -53,6 +53,8 @@
 
     <string name="wallet_mn_verify_success">Mnemonic verify success</string>
     <string name="wallet_mn_verify_fail">Mnemonic verify failed</string>
+    <string name="wallet_mn_verify_btn">Verify</string>
+
 
 
 

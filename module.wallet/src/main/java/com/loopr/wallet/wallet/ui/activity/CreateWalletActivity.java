@@ -118,6 +118,7 @@ public class CreateWalletActivity extends BaseActivity{
         }
         KeyUtil.passwd=mWalletSecret.getText().toString().trim();
         ARouter.getInstance().build("/wallet/PasswdConfirmActivity").navigation();
+        finish();
 
     }
 

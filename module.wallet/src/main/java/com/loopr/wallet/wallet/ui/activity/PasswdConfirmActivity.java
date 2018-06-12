@@ -117,7 +117,9 @@ public class PasswdConfirmActivity extends BaseActivity{
         }
 
         viewModel.newWallet();
+        KeyUtil.passwd=null;
         ARouter.getInstance().build("/wallet/CongrateActivity").navigation();
+        finish();
     }
 
     @OnTextChanged(value = R2.id.wallet_confirm, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
@@ -128,4 +130,9 @@ public class PasswdConfirmActivity extends BaseActivity{
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        KeyUtil.passwd=null;
+        super.onDestroy();
+    }
 }

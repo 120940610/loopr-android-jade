@@ -62,6 +62,7 @@ public class CongrateActivity extends BaseActivity{
         Conf.mnemonic=Arrays.asList(mn.split(" "));
         System.out.println("MnemonicGenerator ："+Conf.mnemonic.get(3));
         ARouter.getInstance().build("/wallet/BackUpActivity").navigation();
+        finish();
     }
 
 }

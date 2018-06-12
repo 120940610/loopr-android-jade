@@ -16,5 +16,6 @@ public class SplashActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ARouter.getInstance().build("/wallet/ManageWalletActivity").navigation();
+        finish();
     }
 }
